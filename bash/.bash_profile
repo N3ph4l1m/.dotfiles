@@ -13,3 +13,4 @@ else
    export SSH_AGENT_PID=$(pgrep ssh-agent)
    export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name agent.*)
 fi
+. "$HOME/.cargo/env"
