@@ -1,0 +1,4 @@
+alias vim='nvim .'  
+alias updateme='sudo dnf update' 
+alias loadkey='ssh-add'
+alias ff='fzf'

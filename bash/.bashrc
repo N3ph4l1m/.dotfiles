@@ -24,5 +24,8 @@ if [ -d ~/.bashrc.d ]; then
 	done
 fi
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 unset rc
 . "$HOME/.cargo/env"
+
