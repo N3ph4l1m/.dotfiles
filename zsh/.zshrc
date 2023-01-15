@@ -81,7 +81,7 @@ if [ -z "$(pgrep ssh-agent)" ]; then
    eval $(ssh-agent -s) > /dev/null
 else
    export SSH_AGENT_PID=$(pgrep ssh-agent)
-   export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name agent.*)
+   export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name agent.\*)
 fi 
 
 source $ZSH/oh-my-zsh.sh
@@ -111,3 +111,8 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+if [ ! -f ~/.zsh_profile ]; then
+    echo "File not found!" >&2;
+   else
+    source ~/.zsh_profile;
+fi
